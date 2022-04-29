@@ -15,8 +15,8 @@ export class Financas {
   }
 
 
-  public addCarteira(c:Carteira){
-    this.carteiras.push(c);
+  public addCarteiras(carts:Carteira[]){
+    this.carteiras.concat(carts);
   }
 
 
