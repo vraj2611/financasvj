@@ -4,6 +4,7 @@ import { MaterialDesignModule } from './material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+//import { ServiceModule } from ''./../services/service.module'
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidenavComponent],

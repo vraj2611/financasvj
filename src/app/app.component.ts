@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, pipe, tap } from 'rxjs';
+import { FirestoreService } from "./services/firestore.service"
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,7 @@ import { Observable, pipe, tap } from 'rxjs';
 export class AppComponent {
   items: Observable<any[]>;
   teste: string;
-  constructor(private afs: AngularFirestore) {
-    this.items = afs
-      .collection('usuarios/L0upEgeHGNhYAOeSjDwT/carteiras')
-      .valueChanges({ idField: 'uid' })
-      .pipe(
-        tap((d) => {
-          console.log(d);
-        })
-      );
-
-    this.teste = 'DDDD';
+  constructor(private zz:FirestoreService) {
+    this.items = this.zz.getCarteiras();
   }
 }
