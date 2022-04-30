@@ -1,11 +1,11 @@
 export class Entidade {
   public nome: string;
-  readonly uid: string;
+  readonly id: string;
   public ativo: boolean;
 
-  constructor(nome:string, uid:string){
+  constructor(nome:string, id:string, ativo:boolean = true){
     this.nome = nome;
-    this.uid = uid;
-    this.ativo = true;
+    this.id = id;
+    this.ativo = ativo;
   }
 }

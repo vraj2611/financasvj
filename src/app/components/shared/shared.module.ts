@@ -4,11 +4,11 @@ import { MaterialDesignModule } from './material.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-//import { ServiceModule } from ''./../services/service.module'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidenavComponent],
-  imports: [CommonModule, MaterialDesignModule],
+  imports: [CommonModule, MaterialDesignModule, RouterModule.forChild([])],
   exports: [
     MaterialDesignModule,
     HeaderComponent,

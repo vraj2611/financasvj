@@ -10,15 +10,21 @@ import { ServiceModule } from './services/service.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TiposgastosComponent } from './components/tiposgastos/tiposgastos.component';
+import { AppRoutingModule } from './approuting.module';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { CarteirasComponent } from './components/carteiras/carteiras.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CarteirasComponent, EventosComponent, DashboardComponent, TiposgastosComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     SharedModule,
     ServiceModule,
+    AppRoutingModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),

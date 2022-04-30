@@ -1,8 +1,7 @@
-<app-header></app-header> <app-footer></app-footer>
+<app-header></app-header>
+<div id="area_conteudo">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
 
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{ item.nome }} abc {{ item.uid }}
-  </li>
-</ul>
-<p>{{ teste }} getfirebase</p>
+

@@ -1,0 +1,17 @@
+<h3>Carteiras</h3>
+
+<mat-form-field  appearance="fill">
+    <mat-label>Carteira Escolhida</mat-label>
+    <input matInput  [(ngModel)]="nomeatual">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="this.update()">Alterar</button>
+
+<div class="text" *ngFor="let item of items | async">
+    <button mat-raised-button color="primary" (click)="this.escolher(item.id, item.nome)">{{ item.nome }}</button>
+</div>
+
+<mat-form-field  appearance="fill">
+    <mat-label>Nova Carteira</mat-label>
+    <input matInput placeholder="Ex. Alimentação" [(ngModel)]="novonome">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="this.addCarteira()">Novo</button>
