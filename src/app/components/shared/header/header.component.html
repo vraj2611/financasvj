@@ -3,6 +3,7 @@
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with menu icon"
+    (click)="abrirMenu()"
   >
     <mat-icon>menu</mat-icon>
   </button>
@@ -12,11 +13,5 @@
     <mat-icon>favorite</mat-icon>
   </button>
   <a routerLink="dashboard" routerLinkActive="active">X</a>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>money</mat-icon>
-  </button>
+
 </mat-toolbar>

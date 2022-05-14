@@ -1,1 +1,6 @@
-<p>sidenav works!</p>
+<div *ngFor="let item of itens">
+    <a mat-button [routerLink]="item.rota" routerLinkActive="active">
+        <mat-icon>{{item.icone}}</mat-icon>
+        {{item.texto}}
+    </a>
+</div>

@@ -1,7 +1,15 @@
 <app-header></app-header>
-<div id="area_conteudo">
-  <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
-
+<mat-drawer-container class="example-container" hasBackdrop="true">
+  <mat-drawer #drawer mode="over" style="width:90%">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    <div id="area_conteudo">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+    
+  </mat-drawer-content>
+</mat-drawer-container>
 
