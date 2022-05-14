@@ -27,15 +27,5 @@ export class FirestoreService {
     let cart = new Carteira( novonome, id);
     this.afs.doc('usuarios/L0upEgeHGNhYAOeSjDwT/carteiras/' + cart.id).update(Object.assign({}, cart))
   }
-  // public getEventos(): Observable<Evento[]> {
-  //   return this.afs
-  //     .collection<Evento>('usuarios/L0upEgeHGNhYAOeSjDwT/carteiras')
-  //     .valueChanges({ idField: 'id' });
-  // }
   
-  // public getTiposGastos(): Observable<TipoGasto[]> {
-  //   return this.afs
-  //     .collection<TipoGasto>('usuarios/L0upEgeHGNhYAOeSjDwT/carteiras')
-  //     .valueChanges({ idField: 'id' });
-  // }
 }
